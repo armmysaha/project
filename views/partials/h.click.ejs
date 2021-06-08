@@ -38,8 +38,8 @@
             <% } else { %>
             <li><a href="/favorite">Favorite</a></li>
             <li><a href="#">Logged as <%= currentUser.username %></a></li>
-            <li><a href="/logout">Log out</a></li>
             <% if(currentUser.isAdmin){%>
+            <li><a href="/logout">Log out</a></li>
             <li><a href="/music">Admin</a></li>
             <% } %>
             <% } %>

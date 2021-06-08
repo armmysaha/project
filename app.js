@@ -6,6 +6,7 @@
       passport        = require('passport'),
       LocalStrategy   = require('passport-local'),
       Music           = require('./models/music'),
+      Artist          = require('./models/artist'),
       User            = require('./models/user'),
       multer          = require('multer'),
       path            = require('path'),
@@ -58,8 +59,24 @@ app.get("/list", function (req, res) {
   res.render("Music/list.ejs");
 });
 
-app.get("/favorit", function (req, res) {
-  res.render("favorite.ejs");
+app.get("/favorite", function (req, res) {
+  Music.find({}, function (err, allMusic) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render("favorite/favorite.ejs", { music: allMusic });
+    }
+  });
+});
+
+app.get("/list", function (req, res) {
+  Music.find({name: req.params.name}, function (err, foundMusic) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render("Music/list.ejs", { music: foundMusic });
+    }
+  });
 });
 
 // app.post('/favorite', function(req, res){
@@ -79,8 +96,6 @@ app.get("/homeclick", function (req, res) {
   });
 });
 
-
-
 app.get("/homeclick/:id", function (req, res) {
   Music.findById(req.params.id, function (err, foundMusic) {
     if (err) {
@@ -93,6 +108,66 @@ app.get("/homeclick/:id", function (req, res) {
 
 app.get("/register", function (req, res) {
   res.render("register.ejs");
+});
+
+
+app.get("/artist", function (req, res) {
+  Artist.find({}, function (err, allArtist) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render("artist.ejs", { artist: allArtist });
+    }
+  });
+});
+
+app.post("/artist", upload.single('image'), function(req,res){
+  req.body.artist.image = '/uploads/'+ req.file.filename;
+  // var newMusic = {title:title, name:name, image:image};
+  Artist.create(req.body.artist, function(err, newlyCreated){
+    if(err){
+      console.log(err);
+    } else {
+      res.redirect('/artist');
+    }
+  });
+});
+
+app.get("/artist/:id", function (req, res) {
+  Artist.findById(req.params.id, function (err, foundArtist) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render("editartist.ejs", { artist: foundArtist });
+    }
+  });
+});
+
+app.put('/artist/:id', upload.single('image'), function(req, res){
+  if(req.file){
+    req.body.artist.image = '/uploads/'+ req.file.filename;
+  }
+  Artist.findByIdAndUpdate(req.params.id, req.body.artist, function(err, updatedArtist){
+    if(err){
+      res.redirect('/artist');
+    } else {
+      res.redirect('/artist');
+    }
+  });
+});
+
+app.delete("/artist/:id", function (req, res) {
+ Artist.findByIdAndRemove(req.params.id, function (err) {
+    if (err) {
+      res.redirect('/artist');
+    } else {
+      res.redirect('/artist');
+    }
+  });
+});
+
+app.get("/music/newartist", function (req, res) {
+  res.render("newartist.ejs");
 });
 
 app.get("/music", function (req, res) {

@@ -27,8 +27,10 @@
         </a>
         <nav id="menu">
           <ul>
+            <li><a href="/homeclick">Home</a></li>
             <li><a href="/music">SONG</a></li>
-            <li><a href="/music">USER</a></li>
+            <li><a href="/artist">ARTIST</a></li>
+            <li><a href="">USER</a></li>
             <% if(!currentUser) { %>
             <% } else { %>
             <li><a href="#">Logged as <%= currentUser.username %></a></li>

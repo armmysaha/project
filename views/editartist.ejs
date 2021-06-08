@@ -1,0 +1,19 @@
+<%- include('partials/new.ejs') %>
+
+<div class="container">
+<form action="/artist/<%= artist._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="form-label">Name</label>
+            <input type="text" class="form-control" name="artist[name]" placeholder="<%= artist.name %>" value="<%= artist.name %>">
+          </div>
+          <div class="mb-3">
+            <label for="form-label">Image</label>
+            <img src="<%= artist.image %>" width="200px">
+            <input type="file" class="form-control" name="image" accept="image/*">
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="/artist">Go back</a>
+</form>
+</div>
+
+<%- include('partials/footer.ejs') %>
