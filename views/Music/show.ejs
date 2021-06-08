@@ -1,0 +1,16 @@
+<%- include('../partials/h.click.ejs') %>
+
+<div class="music-head">
+    <img src="<%= music.image %>" />
+    <section class="music-details">
+      <div class="descrip">
+        <h3><%= music.title %></h3>
+        <p><%= music.name %></p>
+      </div>
+      <% if(currentUser) { %>
+      <button class="myfavo">MY FAVORITE</button>
+      <% }%>
+    </section>   
+</div>
+
+<%- include('../partials/footer.ejs') %>

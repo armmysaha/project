@@ -1,0 +1,14 @@
+<%- include('../partials/h.click.ejs') %>
+
+<h1>YOUR FAVORITE</h1>
+<ul class="card-list">
+  <li class="card">
+    <img src="<%= music.image %>" height="200px" />
+    <div class="card-description">
+      <a href="/homeclick/<%= music._id %>" class="title"><%= music.title %></a><br />
+      <a href="/list" class="name"><%= music.name %></a>
+    </div>
+  </li>
+</ul>
+
+<%- include('../partials/footer.ejs') %>

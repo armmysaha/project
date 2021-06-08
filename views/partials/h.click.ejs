@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>music</title>
+    <link rel="stylesheet" href="/homeclick.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    /> 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  </head>
+  <body>
+    <header>
+      <div class="header-menu">
+        <a href="/" id="logo">
+          <img id="logo" src="https://image.flaticon.com/icons/svg/32/32040.svg"/>
+        </a>
+        <nav id="menu">
+          <ul>
+            <li><a href="/homeclick">Home</a></li>
+            <li><a href="/artist">Artist</a></li>
+            <% if(!currentUser) { %>
+            <li><a href="/register">Join</a></li>
+            <li><a href="/login">Sign in</a></li>
+            <% } else { %>
+            <li><a href="/favorite">Favorite</a></li>
+            <li><a href="#">Logged as <%= currentUser.username %></a></li>
+            <li><a href="/logout">Log out</a></li>
+            <% }  %>
+            <% if(!currentUser.isAdmin) { %>
+            <% } else { %>
+            <li><a href="/music">Admin</a></li>
+            <% } %>
+            <li>
+            <div class="search">
+              <input type="text" class="searchTerm" placeholder="What are you looking for?">
+              <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+              </button>
+            </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </body>
+</html>

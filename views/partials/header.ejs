@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>music</title>
+    <link rel="stylesheet" href="/home.css" />
+    <link rel="stylesheet" href="/login.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-menu">
+        <a href="/" id="logo">
+          <img
+            id="logo"
+            src="https://image.flaticon.com/icons/svg/32/32040.svg"
+        /></a>
+        <nav id="menu">
+          <ul>
+            <li><a href="/homeclick">Home</a></li>
+            <li><a href="/artist">Artist</a></li>
+            <% if(!currentUser) { %>
+            <li><a href="/register">Join</a></li>
+            <li><a href="/login">Sign in</a></li>
+            <% } else { %>
+            <li><a href="/favorite">Favorite</a></li>
+            <li><a href="#">Logged as <%= currentUser.username %></a></li>
+            <li><a href="/logout">Log out</a></li>
+            <% } %>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </body> 
+</html>

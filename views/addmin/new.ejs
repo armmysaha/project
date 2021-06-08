@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs') %>
+
+<div class='container'>
+<form action='/collection' method='POST' enctype="multipart/form-data">
+    <div class="mb-3">
+      <label  class="form-label">Image</label>
+      <input type="text" class="form-control" name='image' placeholder='Image'>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">title</label>
+      <input type="text" class="form-control" name='title' placeholder='Title'>
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">name</label>
+      <input type="text" class="form-control" name='collection[desc]' placeholder='Name'>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a href='/collection'>Go back</a>
+  </form>
+</div>
+
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,23 @@
+<%- include('partials/new.ejs') %>
+
+<div class="container">
+<form action="/music/<%= music._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="form-label">Title</label>
+          <input type="text" class="form-control" name="song[title]" placeholder="<%= music.title %>" value="<%= music.title %>">
+        </div>
+        <div class="mb-3">
+            <label for="form-label">Name</label>
+            <input type="text" class="form-control" name="song[name]" placeholder="<%= music.name %>" value="<%= music.name %>">
+          </div>
+          <div class="mb-3">
+            <label for="form-label">Image</label>
+            <img src="<%= music.image %>" width="200px">
+            <input type="file" class="form-control" name="image" accept="image/*">
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="/music">Go back</a>
+</form>
+</div>
+
+<%- include('partials/footer.ejs') %>
