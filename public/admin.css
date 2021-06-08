@@ -330,3 +330,16 @@ body {
 #delete-form{
     display: inline;
 }
+
+.card-lyrics {
+  min-height: 20rem;
+  margin: 24rem;
+  overflow: hidden;
+  box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+}
+
+.card-lyrics p {
+font-size: 20px;
+text-align-last: center;
+color: azure;
+}

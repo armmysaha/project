@@ -7,13 +7,18 @@
           <input type="text" class="form-control" name="song[title]" placeholder="Title">
         </div>
         <div class="mb-3">
-            <label for="form-label">Name</label>
-            <input type="text" class="form-control" name="song[name]" placeholder="Name">
-          </div>
-          <div class="mb-3">
-            <label for="form-label">Image</label>
-            <input type="file" class="form-control" name="image" accept="image/*">
-          </div>
+          <label for="form-label">Name</label>
+          <input type="text" class="form-control" name="song[name]" placeholder="Name">
+        </div>
+        <div class="mb-3">
+          <label for="form-label">Lyrics</label>
+          <textarea type="text" class="form-control" name="song[lyrics]" placeholder="Lyrics"></textarea><br>
+        </div>
+        <div class="mb-3">
+          <label for="form-label">Image</label>
+          <input type="file" class="form-control" name="image" accept="image/*">
+        </div>
+
         <button type="submit" class="btn btn-primary">Submit</button>
         <a href="/music">Go back</a>
 </form>

@@ -55,9 +55,7 @@ app.get("/", function (req, res) {
   res.render("home.ejs");
 });
 
-app.get("/list", function (req, res) {
-  res.render("Music/list.ejs");
-});
+
 
 app.get("/favorite", function (req, res) {
   Music.find({}, function (err, allMusic) {
@@ -69,15 +67,15 @@ app.get("/favorite", function (req, res) {
   });
 });
 
-app.get("/list", function (req, res) {
-  Music.find({name: req.params.name}, function (err, foundMusic) {
-    if (err) {
-      console.log(err);
-    } else {
-      res.render("Music/list.ejs", { music: foundMusic });
-    }
-  });
-});
+// app.get("/list/:id", function (req, res) {
+//   Music.find({ name: req.params.id }, function (err, foundMusic) {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       res.render("Music/list.ejs", { music: foundMusic });
+//     }
+//   });
+// });
 
 // app.post('/favorite', function(req, res){
 //   var title = req.body.title;
@@ -102,6 +100,26 @@ app.get("/homeclick/:id", function (req, res) {
       console.log(err);
     } else {
       res.render("Music/show.ejs", { music: foundMusic });
+    }
+  });
+});
+
+app.get("/artistall", function (req, res) {
+  Artist.find({}, function (err, allArtist) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render("Music/artistall.ejs", { artist: allArtist });
+    }
+  });
+});
+
+app.get("/artistall/:id", function (req, res) {
+  Music.find({ name: req.params.id }, function (err, foundMusic) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render("Music/list.ejs", { music: foundMusic });
     }
   });
 });

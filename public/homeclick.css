@@ -159,6 +159,19 @@ body {
   text-decoration: none;
 }
 
+.card-lyrics {
+  min-height: 20rem;
+  margin: 24rem;
+  overflow: hidden;
+  box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+}
+
+.card-lyrics p {
+font-size: 20px;
+text-align-last: center;
+color: azure;
+}
+
 .card-description > h2 {
   margin: 0 0 0.5em;
 }
@@ -301,15 +314,6 @@ body {
     font-size: 20px;
   }
 
-
-.myfavo {
-  font-size: 1rem;
-  padding: 10px 0px 10px 0px;
-  background: rgb(246, 255, 116);
-  width: 157px;
-  align-self: center;
-}
-
 .addsong button {
   font-size: 15px;
   background: rgb(85, 95, 226);
@@ -317,8 +321,14 @@ body {
   width: 157px;
   
 }
+.favo button {
+  font-size: 15px;
+  background: rgb(241, 149, 206);
+  padding: 10px 0px 10px 0px;
+  width: 157px;
+}
 
-.addsong {
+.favo {
   text-align-last: center;
   margin: 10px;
 }

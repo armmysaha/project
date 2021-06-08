@@ -31,15 +31,15 @@
         <nav id="menu">
           <ul>
             <li><a href="/homeclick">Home</a></li>
-            <li><a href="/artist">Artist</a></li>
+            <li><a href="/artistall">Artist</a></li>
             <% if(!currentUser) { %>
             <li><a href="/register">Join</a></li>
             <li><a href="/login">Sign in</a></li>
             <% } else { %>
             <li><a href="/favorite">Favorite</a></li>
             <li><a href="#">Logged as <%= currentUser.username %></a></li>
-            <% if(currentUser.isAdmin){%>
             <li><a href="/logout">Log out</a></li>
+            <% if(currentUser.isAdmin){%>
             <li><a href="/music">Admin</a></li>
             <% } %>
             <% } %>

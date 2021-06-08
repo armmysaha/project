@@ -1,28 +1,22 @@
 <%- include('../partials/h.click.ejs') %>
 
-<div class="music-head">
-  <img src="https://s359.kapook.com/pagebuilder/e8f8fe98-7e4c-47fc-a35a-3be3f71ed627.jpg " />
-  <section class="music-details">
-    <div>
-      <p>Name Artist</p>
-    </div>
-  </section>
-</div>
+<% music.forEach(function(music){ %>
 <div id="primary-second-section">
   <div class="most-popular-items">
     <div class="music-icon-section">
-      <img src="https://s359.kapook.com/pagebuilder/e8f8fe98-7e4c-47fc-a35a-3be3f71ed627.jpg"/>
+      <img src="<%= music.image %>"/>
       <i class="fas fa-caret-right"></i>
-      <h2>กีดกัน</h2>
+      <h2><%= music.title %></h2>
     </div>
     <div class="music-artist">
-      <h2>Billkin</h2>
+      <h2><%= music.name %></h2>
     </div>
     <div class="music-favorite">
       <button class="fas fa-heart favorite"></button>
     </div>
   </div>
 </div>
+<% }); %>
 <!-- <div id="primary-second-section">
   <div class="most-popular-items">
     <div class="music-icon-section">

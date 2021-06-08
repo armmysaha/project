@@ -11,6 +11,10 @@
             <input type="text" class="form-control" name="song[name]" placeholder="<%= music.name %>" value="<%= music.name %>">
           </div>
           <div class="mb-3">
+            <label for="form-label">Lyrics</label>
+            <textarea type="text" class="form-control" name="song[lyrics]" placeholder="Lyrics"></textarea><br>
+          </div>
+          <div class="mb-3">
             <label for="form-label">Image</label>
             <img src="<%= music.image %>" width="200px">
             <input type="file" class="form-control" name="image" accept="image/*">

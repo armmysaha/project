@@ -1,257 +1,258 @@
-@import url('https://fonts.googleapis.com/css?family= Architects+Daughter|Signika|Cabin|Lobster');
+@import url("https://fonts.googleapis.com/css?family= Architects+Daughter|Signika|Cabin|Lobster");
 
-*{
-	margin:0;
-	padding:0;
-	line-height: 10%;
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 10%;
 }
 
-body{
-	color: rgb(255, 255, 255);
+body {
+  color: rgb(255, 255, 255);
 }
 
-h2{
-	font-size: 200%;
-	text-align: center;
-	font-family:'Lobster', cursive ;
-	padding-top: 2%;
-	line-height: 150%;
+h2 {
+  font-size: 200%;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  padding-top: 2%;
+  line-height: 150%;
 }
 
-h3{
-	font-size: 150%;
-	line-height: 150%;
-	padding:1% 0;
-	text-indent: 2%;
-	font-family: 'Francois One', sans-serif;
+h3 {
+  font-size: 150%;
+  line-height: 150%;
+  padding: 1% 0;
+  text-indent: 2%;
+  font-family: "Francois One", sans-serif;
 }
 
-h4{
-	font-size: 40px;
-	text-align: center;
-	font-family: 'Architects Daughter', cursive;
+h4 {
+  font-size: 40px;
+  text-align: center;
+  font-family: "Architects Daughter", cursive;
 }
 
-button a{
-	color:black;
+button a {
+  color: black;
 }
 
-p{
-	font-family: 'Cabin', sans-serif;;
-	font-size: 120%;
-	line-height: 150%;
-	padding:2%;
-	margin:2%;
-	text-align: center;
+p {
+  font-family: "Cabin", sans-serif;
+  font-size: 120%;
+  line-height: 150%;
+  padding: 2%;
+  margin: 2%;
+  text-align: center;
 }
 
-img{
-	max-width: 100%;
-	border-radius: 20px;
-	margin: 0 15px;
-	box-shadow: 0 8px 16px 0 rgba(2,2,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.20);
+img {
+  max-width: 100%;
+  border-radius: 20px;
+  margin: 0 15px;
+  box-shadow: 0 8px 16px 0 rgba(2, 2, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-button{
-	text-align: center;
-	border-radius: 25px;
-	padding: 10px;
-	width: 250px;
-	height: 50px;
-	font-size: 25px;
-	background-color:#D5DBDB;
-	border:none;
-	display: inline-block;
-	cursor: pointer;
-	transition: all 0.5s;
-	margin: 5px;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+button {
+  text-align: center;
+  border-radius: 25px;
+  padding: 10px;
+  width: 250px;
+  height: 50px;
+  font-size: 25px;
+  background-color: #d5dbdb;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.5s;
+  margin: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-button span{
-	cursor: pointer;
-	display: inline-block;
-	position: relative;
-	transition:0.5s;
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-button span:after{
-	content: 'Now!';
-	position: absolute;
-	opacity: 0;
-	top: 0;
-	right: -10px;
-	transition: 0.5s;
-	color:red;
+button span:after {
+  content: "Now!";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+  color: red;
 }
 
-button:hover span{
-	padding-right: 60px;
-	font-weight: bold;
+button:hover span {
+  padding-right: 60px;
+  font-weight: bold;
 }
 
-button:hover span:after{
-	opacity: 1;
-	right: 0;
+button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
-header{
-	width: 100%;
-	height: 90px;
-	background-color: #F1C40F;
+header {
+  width: 100%;
+  height: 90px;
+  background-color: #f1c40f;
 }
 
-.header-menu{
-	padding-left: 50px;
+.header-menu {
+  padding-left: 50px;
 }
 
-#logo{
-	width: 5%;
-	box-shadow: none;
-	padding: 9px;
-	cursor: pointer;
+#logo {
+  width: 5%;
+  box-shadow: none;
+  padding: 9px;
+  cursor: pointer;
 }
 
-nav{
-	float: right;
-	padding: 20px 20px 0 0;
-	word-spacing: 0.01em; /*space per words*/
-	letter-spacing: 0.05em; /*space per line*/
+nav {
+  float: right;
+  padding: 20px 20px 0 0;
+  word-spacing: 0.01em; /*space per words*/
+  letter-spacing: 0.05em; /*space per line*/
 }
 
-nav ul li{
-	font-family: 'Signika', sans-serif;
-	font-size: 150%;
-	display: inline-block;
-	padding: 25px 5px;
+nav ul li {
+  font-family: "Signika", sans-serif;
+  font-size: 150%;
+  display: inline-block;
+  padding: 25px 5px;
 }
 
-a{
-	text-decoration: none;
-	text-align: center;
-	padding:5px;
-	color: #2980B9;
-	font-size: 25px;
+a {
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  color: #2980b9;
+  font-size: 25px;
 }
 
-nav ul li a:hover{
-	color: black;
+nav ul li a:hover {
+  color: black;
 }
-nav ul li a:active{
-	color: white;
-}
-
-.banner{
-	width: 100%;
-	max-height: 900px;
-	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("http://www.rd.com/wp-content/uploads/sites/2/2016/05/03-flatten-belly-gum.jpg")no-repeat center;
-	background-size: 100%;
+nav ul li a:active {
+  color: white;
 }
 
-.wallpaper-text{
-	font-size: 50px;
-	padding: 400px 10px;
+.banner {
+  width: 100%;
+  max-height: 900px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("http://www.rd.com/wp-content/uploads/sites/2/2016/05/03-flatten-belly-gum.jpg")
+      no-repeat center;
+  background-size: 100%;
 }
 
-.first-content{
-	width: 100%;
-	background: #F1C40F;
-	height: auto;
+.wallpaper-text {
+  font-size: 50px;
+  padding: 400px 10px;
+}
+
+.first-content {
+  width: 100%;
+  background: #f1c40f;
+  height: auto;
 }
 
 article {
-	float: left;
-	width: 100%;
-	height: auto;
+  float: left;
+  width: 100%;
+  height: auto;
 }
 
-aside{
-	margin: 50px auto;
-	width: 50%;
-	height: auto;
+aside {
+  margin: 50px auto;
+  width: 50%;
+  height: auto;
 }
 
-section{
-	display: inline-block;
+section {
+  display: inline-block;
 }
-#girl-info{
-	position: relative;
-	color: black;
-}
-
-.reg-section{
-	background: #212F3D;
-	width: 100%;
-	padding-top: 15px;
-	padding-bottom: 20px;
-	line-height: 20px;
-	text-align: center;
-	font-size: 30px;
+#girl-info {
+  position: relative;
+  color: black;
 }
 
-.reg-section p{
-	text-align: center;
-	width: 60%;
-	height: auto;
-	padding-left: 240px;
-	font-size: 20px;
+.reg-section {
+  background: #212f3d;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 30px;
 }
 
-.glowing{
-	text-shadow: #F7DC6F 0 0 5px, #FF0000 5px 5px 5px;
+.reg-section p {
+  text-align: center;
+  width: 60%;
+  height: auto;
+  padding-left: 240px;
+  font-size: 20px;
+}
+
+.glowing {
+  text-shadow: #f7dc6f 0 0 5px, #ff0000 5px 5px 5px;
 }
 
 @media screen and (max-width: 890px) {
-	header{
-		width: 100%;
-		height: 200px;
-		background-color: #dcddd7;
-	}
+  header {
+    width: 100%;
+    height: 200px;
+    background-color: #dcddd7;
+  }
 
-	nav ul li{
-		font-family: 'Signika', sans-serif;
-		padding: 20px 5px;
-	}
+  nav ul li {
+    font-family: "Signika", sans-serif;
+    padding: 20px 5px;
+  }
 
-	.reg-section p{
-		text-align: center;
-		width: 50%;
-		height: auto;
-		padding-left: 190px;
-	}
+  .reg-section p {
+    text-align: center;
+    width: 50%;
+    height: auto;
+    padding-left: 190px;
+  }
 
-	.second-content{
-		width: 50%;
-	}
+  .second-content {
+    width: 50%;
+  }
 
-	.second-content img{
-		width: 23%;
-	}
+  .second-content img {
+    width: 23%;
+  }
 
-	.header-menu{
-		padding-top: 10px;
-	}
+  .header-menu {
+    padding-top: 10px;
+  }
 
-	#logo{
-		width: 5%;
-		box-shadow: none;
-		padding: 2px;
-		cursor: pointer;
-	}
+  #logo {
+    width: 5%;
+    box-shadow: none;
+    padding: 2px;
+    cursor: pointer;
+  }
 
-	nav{
-		float: right;
-		padding: 20px 100px 0 0;
-	}
+  nav {
+    float: right;
+    padding: 20px 100px 0 0;
+  }
 
-	a{
-		text-decoration: none;
-		text-align: center;
-		padding:5px;
-		color: #2980B9;
-		font-size: 20px;
-	}
-
+  a {
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    color: #2980b9;
+    font-size: 20px;
+  }
 }
 
 /* .main{
@@ -264,3 +265,7 @@ section{
     font-size: 60px;
 } */
 
+.music-head {
+  display: flex;
+  justify-content: center;
+}
