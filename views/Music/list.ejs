@@ -1,5 +1,6 @@
 <%- include('../partials/h.click.ejs') %>
 
+<h1>Music of artist</h1>
 <% music.forEach(function(music){ %>
 <div id="primary-second-section">
   <div class="most-popular-items">
@@ -12,7 +13,9 @@
       <h2><%= music.name %></h2>
     </div>
     <div class="music-favorite">
+      <% if(currentUser) { %>
       <button class="fas fa-heart favorite"></button>
+      <% }%>
     </div>
   </div>
 </div>

@@ -5,6 +5,12 @@ header {
   height: 90px;
   background-color: #F1C40F;
 }
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 body {
   margin: 0%;
 }
@@ -102,6 +108,7 @@ nav ul {
   background: #fff center center no-repeat;
   background-size: cover;
   background-position: center;
+  align-items: center;
 }
 
 .title {
@@ -161,7 +168,7 @@ body {
 
 .card-lyrics {
   min-height: 20rem;
-  margin: 24rem;
+  margin: 2rem;
   overflow: hidden;
   box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
 }
@@ -170,6 +177,7 @@ body {
 font-size: 20px;
 text-align-last: center;
 color: azure;
+margin: 3%;
 }
 
 .card-description > h2 {
@@ -182,6 +190,7 @@ color: azure;
 
 .card a {
   font-size: 10px;
+  padding: 0;
 }
 
 #primary-second-section{
@@ -337,3 +346,19 @@ color: azure;
   align-items: center; 
 }
 
+.image-show {
+  text-align-last: center;
+  white-space: pre-line;
+}
+
+.descrip h3{
+  font-size: 35px;
+  color: white;
+  text-align-last: center;
+}
+
+.descrip p {
+  font-size: 20px;
+  color: #515151;
+  text-align-last: center;
+}

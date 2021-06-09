@@ -3,11 +3,13 @@
 <h1>ARTIST</h1>
 <ul class="card-list">
   <% artist.forEach(function(artist){ %>
-  <li class="card">
-    <img src="<%= artist.image %>" height="200px" />
-    <div class="card-description">
-      <a href="/artistall/<%= artist.name %>" class="name"><%= artist.name %></a><br/>
-    </div>
-  </li>
+    <a href="/artistall/<%= artist.name %>" class="name">
+    <li class="card">
+        <img src="<%= artist.image %>" height="200px" />
+        <div class="card-description">
+        <a href="/artistall/<%= artist.name %>" class="name"><%= artist.name %><br/>
+        </div>
+    </li>
+    </a>
   <% }); %>
 </ul>

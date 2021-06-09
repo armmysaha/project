@@ -1,7 +1,9 @@
 <%- include('../partials/h.click.ejs') %>
-<div class="music-head">
-  <img src="<%= music.image %>" />
-  <section class="music-details">
+<!-- <div class="music-head"> -->
+<div class="image-show">
+  <img src="<%= music.image %>"  width="200px">
+</div>
+  <!-- <section class="music-details"> -->
     <div class="descrip">
       <h3><%= music.title %></h3>
       <p><%= music.name %></p>
@@ -11,9 +13,9 @@
       <button class="favo">MY FAVORITE</button>
     <% }%>
     </div> 
-  </section>
+  <!-- </section> -->
   
-</div>
+<!-- </div> -->
 <div class="card-lyrics">
   <p><%= music.lyrics %></p>
 </div>
