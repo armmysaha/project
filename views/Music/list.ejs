@@ -5,7 +5,7 @@
 <div id="primary-second-section">
   <div class="most-popular-items">
     <div class="music-icon-section">
-      <img src="<%= music.image %>"/>
+      <img src="<%= music.image %>" />
       <i class="fas fa-caret-right"></i>
       <h2><%= music.title %></h2>
     </div>
@@ -14,7 +14,28 @@
     </div>
     <div class="music-favorite">
       <% if(currentUser) { %>
-      <button class="fas fa-heart favorite"></button>
+      <form action="/artistall/<%= music.name %>" method="POST">
+        <input
+          type="text"
+          name="fav[username]"
+          value="<%= currentUser.username %>"
+          hidden
+        />
+        <input
+          type="text"
+          name="fav[title]"
+          value="<%= music.title %>"
+          hidden
+        />
+        <input type="text" name="fav[name]" value="<%= music.name %>" hidden />
+        <input
+          type="text"
+          name="fav[image]"
+          value="<%= music.image %>"
+          hidden
+        />
+        <button type="submit" class="fas fa-heart favorite"></button>
+      </form>
       <% }%>
     </div>
   </div>

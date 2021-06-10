@@ -238,6 +238,7 @@ margin: 3%;
     border: hidden;
     background: unset;
 }
+
 .music-icon-section > img{
   width: 55px;
   height: 50px;
@@ -331,10 +332,10 @@ margin: 3%;
   
 }
 .favo button {
-  font-size: 15px;
-  background: rgb(241, 149, 206);
-  padding: 10px 0px 10px 0px;
-  width: 157px;
+  background: border-box;
+  color: rgb(206, 53, 79);
+  border: none;
+  font-size: 30px;
 }
 
 .favo {
@@ -361,4 +362,11 @@ margin: 3%;
   font-size: 20px;
   color: #515151;
   text-align-last: center;
+}
+
+#favo-form button {
+  color: crimson;
+  font-size: 23px;
+  border: hidden;
+  background: bottom;
 }

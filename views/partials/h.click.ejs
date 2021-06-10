@@ -37,7 +37,7 @@
             <li><a href="/register">Join</a></li>
             <li><a href="/login">Sign in</a></li>
             <% } else { %>
-            <li><a href="/favorite">Favorite</a></li>
+            <li><a href="/favorite/<%= currentUser.username %>">Favorite</a></li>
             <li><a href="#">Logged as <%= currentUser.username %></a></li>
             <li><a href="/logout">Log out</a></li>
             <% if(currentUser.isAdmin){%>
@@ -45,16 +45,14 @@
             <% } %>
             <% } %>
             <li>
+            <form action="/search" method="POST">
               <div class="search">
-                <input
-                  type="text"
-                  class="searchTerm"
-                  placeholder="What are you looking for?"
-                />
+                <input type="text" class="searchTerm" name="search" placeholder="What are you looking for?"/>
                 <button type="submit" class="searchButton">
-                  <i class="fa fa-search"></i>
+                  <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
               </div>
+            </form>
             </li>
           </ul>
         </nav>

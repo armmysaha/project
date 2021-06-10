@@ -1,26 +1,31 @@
 <%- include('partials/h.admin.ejs') %>
 
 <h1>Artist</h1>
+<div class="addsong">
+  <a href="/music/newartist"><button class="addsong">ADD ARTIST</button></a>
+</div>
 <% artist.forEach(function(artist){ %>
 <div id="primary-second-section">
-    <div class="most-popular-items">
-        <div class="music-icon-section">
-            <img src="<%= artist.image %>"/>
-       </div>
-      <div class="music-artist">
-        <h2><%= artist.name %></h2>
-      </div>
-      <div>
-        <a href="/artist/<%= artist._id %>"><button>Edit</button></a>
-        <form id = 'delete-form' action="/artist/<%= artist._id %>?_method=DELETE" method="POST">
-            <a href="/artist/<%= artist._id %>"><button>Delete</button></a>
-        </form>
-      </div>
+  <div class="most-popular-items">
+    <div class="music-icon-section">
+      <img src="<%= artist.image %>" />
     </div>
+    <div class="music-artist">
+      <h2><%= artist.name %></h2>
+    </div>
+    <div>
+      <a href="/artist/<%= artist._id %>"><button>Edit</button></a>
+      <form
+        id="delete-form"
+        action="/artist/<%= artist._id %>?_method=DELETE"
+        method="POST"
+      >
+        <a href="/artist/<%= artist._id %>"><button>Delete</button></a>
+      </form>
+    </div>
+  </div>
 </div>
 <% }); %>
-<div class="addsong">
-    <a href="/music/newartist"><button class="addsong">ADD ARTIST</button></a>
-</div>
+
 
 <%- include('partials/footer.ejs') %>

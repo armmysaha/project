@@ -1,0 +1,19 @@
+<%- include('partials/h.admin.ejs') %>
+
+<h1>MEMBER</h1>
+<% user.forEach(function(user){ %>
+<div id="primary-second-section">
+    <div class="most-popular-items">
+      <div class="music-artist">
+        <h2><%= user.username %></h2>
+      </div>
+      <div>
+        <form id = 'delete-form' action="/member/<%= user._id %>?_method=DELETE" method="POST">
+            <a href="/member/<%= user._id %>"><button>Delete</button></a>
+        </form>
+      </div>
+    </div>
+</div>
+<% }); %>
+
+<%- include('partials/footer.ejs') %>

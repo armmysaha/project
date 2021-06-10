@@ -30,19 +30,21 @@
             <li><a href="/homeclick">Home</a></li>
             <li><a href="/music">SONG</a></li>
             <li><a href="/artist">ARTIST</a></li>
-            <li><a href="">MEMBER</a></li>
+            <li><a href="/member">MEMBER</a></li>
             <% if(!currentUser) { %>
             <% } else { %>
             <li><a href="#">Logged as <%= currentUser.username %></a></li>
             <li><a href="/logout">Log out</a></li>
             <% } %>
             <li>
-            <div class="search">
-              <input type="text" class="searchTerm" placeholder="What are you looking for?">
-              <button type="submit" class="searchButton">
-              <i class="fa fa-search"></i>
-              </button>
-            </div>
+              <form action="/search" method="POST">
+                <div class="search">
+                  <input type="text" class="searchTerm" name="search" placeholder="What are you looking for?"/>
+                  <button type="submit" class="searchButton">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </form>
             </li>
           </ul>
         </nav>

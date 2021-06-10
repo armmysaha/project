@@ -1,6 +1,9 @@
 <%- include('partials/h.admin.ejs') %>
 
 <h1>Music</h1>
+<div class="addsong">
+  <a href="/music/new"><button class="addsong">ADD SONG</button></a>
+</div>
 <% music.forEach(function(music){ %>
 <div id="primary-second-section">
     <div class="most-popular-items">
@@ -22,8 +25,6 @@
     </div>
 </div>
 <% }); %>
-<div class="addsong">
-    <a href="/music/new"><button class="addsong">ADD SONG</button></a>
-</div>
+
 
 <%- include('partials/footer.ejs') %>
