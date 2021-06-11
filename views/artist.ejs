@@ -15,12 +15,8 @@
     </div>
     <div>
       <a href="/artist/<%= artist._id %>"><button>Edit</button></a>
-      <form
-        id="delete-form"
-        action="/artist/<%= artist._id %>?_method=DELETE"
-        method="POST"
-      >
-        <a href="/artist/<%= artist._id %>"><button>Delete</button></a>
+      <form id="delete-form" action="/artist/<%= artist._id %>?_method=DELETE" method="POST">
+        <a href="/artist/<%= artist._id %>"><button onclick="return confirm('Are you sure you want to Remove?');">Delete</button></a>
       </form>
     </div>
   </div>

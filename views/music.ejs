@@ -19,7 +19,7 @@
         <a href="/music/view/<%= music._id %>"><button>View</button></a>
         <a href="/music/<%= music._id %>"><button>Edit</button></a>
         <form id = 'delete-form' action="/music/<%= music._id %>?_method=DELETE" method="POST">
-          <a href="/music/<%= music._id %>"><button>Delete</button></a>
+          <a href="/music/<%= music._id %>"><button onclick="return confirm('Are you sure you want to Remove?');">Delete</button></a>
         </form>
       </div>
     </div>
