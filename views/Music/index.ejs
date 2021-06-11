@@ -4,10 +4,10 @@
 <ul class="card-list">
   <% music.forEach(function(music){ %>
   <li class="card">
-    <a href="/homeclick/<%= music._id %>" class="title">
+    <a href="/homeclick/<%= music.title %>" class="title">
     <image src="<%= music.image %>" height="200px" />
     <div class="card-description">
-      <a href="/homeclick/<%= music._id %>" class="title"><%= music.title %></a><br/>
+      <a href="/homeclick/<%= music.title %>" class="title"><%= music.title %></a><br/>
       <a href="#" class="name"><%= music.name %></a>
     </div>
   </a>

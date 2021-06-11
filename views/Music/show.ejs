@@ -1,14 +1,14 @@
 <%- include('../partials/h.click.ejs') %>
 <!-- <div class="music-head"> -->
 <div class="image-show">
-  <img src="<%= music.image %>"  width="300px">
+  <img src="<%= music.image %>" width="300px" />
 </div>
-  <!-- <section class="music-details"> -->
-    <div class="descrip">
-      <h3><%= music.title %></h3>
-      <p><%= music.name %></p>
-    </div> 
-    <!-- <div class="favo">
+<!-- <section class="music-details"> -->
+<div class="descrip">
+  <h3><%= music.title %></h3>
+  <p><%= music.name %></p>
+</div>
+<!-- <div class="favo">
       <% if(currentUser) { %>
         <form action="/artistall/<%= music.name %>" method="POST">
           <input
@@ -34,8 +34,8 @@
         </form>
         <% }%>
     </div>  -->
-  <!-- </section> -->
-  
+<!-- </section> -->
+
 <!-- </div> -->
 <div class="card-lyrics">
   <pre><%= music.lyrics %></pre>

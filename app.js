@@ -87,10 +87,6 @@ app.delete("/favorite/:id", function (req, res) {
   });
 });
 
-
-
-
-
 // app.get("/list/:id", function (req, res) {
 //   Music.find({ name: req.params.id }, function (err, foundMusic) {
 //     if (err) {
@@ -119,10 +115,11 @@ app.get("/homeclick", function (req, res) {
 });
 
 app.get("/homeclick/:id", function (req, res) {
-  Music.findById(req.params.id, function (err, foundMusic) {
+  Music.findOne({ title: req.params.id }, function (err, foundMusic) {
     if (err) {
       console.log(err);
     } else {
+      console.log(foundMusic);
       res.render("Music/show.ejs", { music: foundMusic });
     }
   });

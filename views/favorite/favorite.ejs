@@ -4,15 +4,21 @@
 <ul class="card-list">
   <% favorite.forEach(function(favorite){ %>
   <li class="card">
+    <a href="/homeclick/<%= favorite.title %>" class="title">
     <img src="<%= favorite.image %>" height="200px" />
     <div class="card-description">
-      <a href="" class="title"
-        ><%= favorite.title %></a
-      ><br/>
+        <%= favorite.title %>
+      </a><br />
       <a href="" class="name"><%= favorite.name %></a>
     </div>
-    <form id = 'favo-form' action="/favorite/<%= favorite._id %>?_method=DELETE" method="POST">
-      <a href="/favorite/<%= favorite._id %>"><button class="fas fa-minus-circle"></button></a>
+    <form
+      id="favo-form"
+      action="/favorite/<%= favorite._id %>?_method=DELETE"
+      method="POST"
+    >
+      <a href="/favorite/<%= favorite._id %>"
+        ><button class="fas fa-minus-circle"></button
+      ></a>
     </form>
   </li>
   <% }); %>
