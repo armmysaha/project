@@ -1,7 +1,12 @@
 <%- include('partials/h.click.ejs') %>
 
 <h1>Your search</h1>
-<ul class="card-list">
+<% if(music == '' ) { %>
+  <div class="notsearch">
+  <p>NOT YOUR SEARCH</p>
+  </div>
+<% } else { %>
+  <ul class="card-list">
   <% music.forEach(function(music){ %>
   <li class="card">
     <a href="/homeclick/<%= music._id %>" class="title">
@@ -13,7 +18,8 @@
   </a>
   </li>
   <% }); %>
-</ul>
+  </ul>
+<% } %>
 
 
 <!-- <h1>RECENTLY</h1>s

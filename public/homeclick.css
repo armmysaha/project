@@ -374,3 +374,8 @@ margin: 3%;
 .card img {
   align-items: center;
 }
+
+.notsearch p {
+  font-size: 45px;
+  text-align: center;
+}
