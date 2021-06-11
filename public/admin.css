@@ -343,3 +343,43 @@ font-size: 20px;
 text-align-last: center;
 color: azure;
 }
+
+
+.card-lyrics {
+  min-height: 20rem;
+  margin: 2rem;
+  overflow: hidden;
+  box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+}
+
+.card-lyrics pre {
+font-size: 20px;
+text-align-last: center;
+color: azure;
+margin: 3%;
+}
+
+.card-description > h2 {
+  margin: 0 0 0.5em;
+}
+
+.card-description > p {
+  margin: 0;
+}
+
+.image-show {
+  text-align-last: center;
+  white-space: pre-line;
+}
+
+.descrip h3{
+  font-size: 35px;
+  color: white;
+  text-align-last: center;
+}
+
+.descrip p {
+  font-size: 20px;
+  color: #515151;
+  text-align-last: center;
+}

@@ -1,16 +1,44 @@
 <%- include('partials/h.admin.ejs') %>
 
-<div class="music-head">
-    <img src="<%= music.image %>" />
-    <section class="music-details">
-      <div class="descrip">
-        <h3><%= music.title %></h3>
-        <p><%= music.name %></p>
-      </div>
-    </section>   
+<div class="image-show">
+  <img src="<%= music.image %>"  width="300px">
 </div>
+  <!-- <section class="music-details"> -->
+    <div class="descrip">
+      <h3><%= music.title %></h3>
+      <p><%= music.name %></p>
+    </div> 
+    <!-- <div class="favo">
+      <% if(currentUser) { %>
+        <form action="/artistall/<%= music.name %>" method="POST">
+          <input
+            type="text"
+            name="fav[username]"
+            value="<%= currentUser.username %>"
+            hidden
+          />
+          <input
+            type="text"
+            name="fav[title]"
+            value="<%= music.title %>"
+            hidden
+          />
+          <input type="text" name="fav[name]" value="<%= music.name %>" hidden />
+          <input
+            type="text"
+            name="fav[image]"
+            value="<%= music.image %>"
+            hidden
+          />
+          <button type="submit" class="fas fa-heart favorite"></button>
+        </form>
+        <% }%>
+    </div>  -->
+  <!-- </section> -->
+  
+<!-- </div> -->
 <div class="card-lyrics">
-  <p><%= music.lyrics %></p>
+  <pre><%= music.lyrics %></pre>
 </div>
 
 <%- include('partials/footer.ejs') %>
