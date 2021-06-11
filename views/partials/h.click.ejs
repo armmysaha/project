@@ -38,11 +38,11 @@
             <li><a href="/login">Sign in</a></li>
             <% } else { %>
             <li><a href="/favorite/<%= currentUser.username %>">Favorite</a></li>
-            <li><a href="#">Logged as <%= currentUser.username %></a></li>
-            <li><a href="/logout">Log out</a></li>
             <% if(currentUser.isAdmin){%>
             <li><a href="/music">Admin</a></li>
             <% } %>
+            <li><a href="#">Logged as <%= currentUser.username %></a></li>
+            <li><a href="/logout">Log out</a></li>
             <% } %>
             <li>
             <form action="/search" method="POST">

@@ -14,7 +14,7 @@
     </div>
     <div class="music-favorite">
       <% if(currentUser) { %>
-      <form action="/artistall/<%= music.name %>" method="POST">
+      <form id="fav" action="/artistall/<%= music.name %>" method="POST">
         <input
           type="text"
           name="fav[username]"

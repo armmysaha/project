@@ -167,6 +167,7 @@ body {
 }
 
 .card-lyrics {
+  background-color: rgba(40, 57, 114, 0.336);
   min-height: 20rem;
   margin: 2rem;
   overflow: hidden;
@@ -233,10 +234,13 @@ margin: 3%;
     color: rgb(70, 69, 69);
 }
 .music-favorite button{
-    color: rgb(0, 0, 0);
     width: 170px;
     border: hidden;
     background: unset;
+}
+
+.fa-heart::before {
+  color: #000000;
 }
 
 .music-icon-section > img{
@@ -379,3 +383,4 @@ margin: 3%;
   font-size: 45px;
   text-align: center;
 }
+
